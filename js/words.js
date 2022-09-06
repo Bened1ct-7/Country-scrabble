@@ -168,7 +168,7 @@ const countries = [
      hint: 'Country in Africa'
    },
    {
-     name: 'Austrailia',
+     name: 'Australia',
      hint: 'Country in Oceania'
    },
    {
