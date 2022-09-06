@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=ubuntu:wght@400;600;700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #398DDE;
+  --color: #377DED;
+}
+
+#content {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--main-color);
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #fff;
+  padding: .5rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 520;
+  text-align: center;
+}
+
+main .wrapper {
+  /*display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;*/
+  height: 100%;
+}
+
+main .score-board {
+  margin: 2rem auto;
+  background: #fff;
+  width: 90%;
+  max-width: 22rem;
+  border-radius: .5rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score-board > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.score-board > div p {
+  font-weight: 500;
+}
+
+.score-board > div span {
+  margin-top: .3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+main .container {
+  background: #fff;
+  width: 90%;
+  max-width: 22rem;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  backdrop-filter: blur(5px);
+}
+
+.container .title {
+  padding: .5rem 1rem 1rem;
+  border-bottom: 1px solid #bbb;
+}
+
+.title h2 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.container .screen {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.container .word {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 510;
+  letter-spacing: .7rem;
+  word-break: break-all;
+}
+
+.container .word.animate {
+  animation: scale 1s cubic-bezier(0.86, 0, 0.07, 1) 1;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.container .hint-time {
+  margin-top: 1rem;
+}
+
+.container .input-box {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.container form {
+  width: 100%;
+}
+
+.container form input {
+  appearance: none;
+  height: 2rem;
+  border: 1px solid #bbb;
+  border-radius: 0.3rem; 
+  width: 90%;
+  outline: none;
+  display: block;
+  padding: 0 1rem 0 .6rem;
+  margin: auto;
+}
+
+form input.wrong {
+  border: 1px solid red;
+}
+
+form input::placeholder {
+  color: #bbb;
+}
+
+form input:focus {
+  border: 1px solid #888;
+}
+
+.container .buttons,
+.button-div{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons button,
+.button-div button{
+  flex-basis: 48%;
+  height: 2rem;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: .3rem;
+}
+
+.buttons .refresh {
+  background: #ddd;
+  border-color: #ddd;
+}
+
+.buttons .check,
+.button-div .yes-btn{
+  color: #fff;
+  border-color: var(--color);
+  background: var(--color);
+}
+
+.hint-time .time {
+  font-weight: 600;
+}
+
+.hint-time .time.red {
+  color: red;
+}
+
+.msg-box {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: #fff;
+  width: 13rem;
+  margin: auto;
+  border-radius: .4rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  animation: display .65s linear 1;
+}
+
+@keyframes display {
+  from {
+    opacity: 0.8;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 15%;
+  }
+}
+
+.msg-box .clear-btn {
+  position: absolute;
+  top: .3rem;
+  right: .3rem;
+  border: 1px solid transparent;
+  color: #fff;
+  border-radius: .3rem;
+  background: red;
+  padding: .1rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.msg-box .msg-text {
+  font-size: .9rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+

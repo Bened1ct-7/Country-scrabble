@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Countries Scrabble</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <div class="wrapper">
+        <h1>Country Scrabble</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+
+        <div class="score-board">
+          <div>
+            <p>High Score</p>
+            <span class="high-score">0</span>
+          </div>
+          <div>
+            <p>Score</p>
+            <span class="score">0</span>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="title">
+            <h2>Country Scrabble</h2>
+          </div>
+          <div class="screen">
+            <p class="word"></p>
+
+            <div class="hint-time">
+              <p>Hint: <span class="hint">Country in Africa</span></p>
+              <p>Time left: <span class="time">30</span>s</p>
+            </div>
+          </div>
+          <div class="input-box">
+            <form action="#" id="form">
+              <input type="text" id="input" placeholder="Enter a valid word">
+              <div class="buttons">
+                <button class="refresh" type="button">Reshuffle </button>
+                <button class="check" type="submit">Check word</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/words.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
