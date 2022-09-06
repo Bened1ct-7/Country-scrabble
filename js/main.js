@@ -12,8 +12,7 @@ let score = 0,
   currentTime = 30,
   time = currentTime;
 let scoreArray = JSON.parse(localStorage.getItem('high-score'));
-let highScore = Math.max(...scoreArray);
-hscoreText.innerText = highScore;
+let highScore;
 
 let country, mainWord, shuffled, userGuess, random, div;
 
@@ -48,7 +47,7 @@ initGame();
 function checkScoreArray() {
   scoreArray = JSON.parse(localStorage.getItem('high-score'));
   if (!scoreArray) {
-    scoreArray = [0];
+    scoreArray = [0, 0, 0];
     highScore = Math.max(...scoreArray);
     hscoreText.textContent = highScore;
   }
